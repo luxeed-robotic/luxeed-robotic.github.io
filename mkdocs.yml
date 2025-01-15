@@ -1,0 +1,4 @@
+site_name: LUXEED Robotics
+site_url: https://luxeed-robotic.github.io
+theme:
+  name: material
