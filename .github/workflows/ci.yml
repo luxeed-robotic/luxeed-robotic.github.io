@@ -1,28 +1,41 @@
 name: ci
+
 on:
   push:
     branches:
       - main
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
+      # Checkout the code
       - uses: actions/checkout@v4
+
+      # Configure Git credentials
       - name: Configure Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v5
+
+      # Create a public folder and copy all necessary files
+      - run: |
+          mkdir -p public
+          cp index.html public/
+          cp farmers.html public/
+          cp investors.html public/
+          cp laser-ai.html public/
+
+          # Copy the assets folder (ensure it's included in the deployment)
+          cp -r assets public/
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v4
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+          branch: gh-pages
+          folder: public
