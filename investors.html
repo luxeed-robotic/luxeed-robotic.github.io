@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <title>LUXEED Robotics</title>
+    <title>For Investors | Luxeed Robotics</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
       * {
@@ -28,8 +28,8 @@
       }
       .container {
         width: 100%;
-        max-width: 1000px;
-        min-height: 50%;
+        max-width: 1100px;
+        min-height: 60%;
         background: rgba(40, 40, 40, 0.9);
         padding: 40px;
         border-radius: 12px;
@@ -49,24 +49,18 @@
       h1 {
         font-size: 32px;
         font-weight: 600;
+      }
+      p {
+        font-size: 18px;
         margin-bottom: 20px;
       }
-      .intro {
-        width: 80%;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .buttons {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 20px;
+      a {
+        color: #7cc142;
+        text-decoration: none;
+        font-weight: 600;
       }
       .buttons a {
-        width: 100%;
-        max-width: 200px;
+        min-width: 150px;
         display: inline-block;
         padding: 18px 28px;
         background: linear-gradient(135deg, #7cc142, #68a539);
@@ -78,6 +72,7 @@
         transition: all 0.3s ease-in-out;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
         letter-spacing: 0.5px;
+        margin-top: 20px;
       }
       .buttons a:hover {
         background: linear-gradient(135deg, #68a539, #5d9432);
@@ -85,8 +80,11 @@
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
       }
       .section {
-        margin-top: 20px;
+        margin-top: 30px;
         width: 70%;
+      }
+      video {
+        margin-top: 10px;
       }
       @keyframes fadeIn {
         from {
@@ -103,34 +101,36 @@
   <body>
     <div class="container">
       <img src="assets/logo.png" alt="Luxeed Robotics Logo" class="logo" />
-      <div class="intro">
-        <h1>Welcome to LUXEED Robotics</h1>
+      <h1>For Investors</h1>
+
+      <!-- Investment Teaser PDF Section -->
+      <div class="section">
+        <h2>Investment Teaser</h2>
         <p>
-          <strong>Our mission is to revolutionize agriculture</strong> by
-          combining the power of lasers and artificial intelligence to create
-          the most efficient and sustainable farming practices.
+          <a href="assets/investment-teaser.pdf" target="_blank"
+            >Download the Investment Teaser</a
+          >
+          to learn more about the investment opportunities at Luxeed Robotics.
+        </p>
+      </div>
+      <div class="section">
+        <h2>Feel Free to Drop Us a Message</h2>
+        <p>
+          We'd love to hear from you! If you have any questions or inquiries,
+          <a href="https://luxeedrobotics.com/contact-us" target="_blank"
+            ><strong>Contact Us</strong></a
+          >
+          and we will get in touch with you.
+        </p>
+        <p>
+          <strong>Interested in our pitch deck?</strong>
+          You can request it by reaching out to us through the contact form.
+          We’ll be happy to share more details with you!
         </p>
       </div>
 
-      <div class="section">
-        <h2 style="margin-bottom: 10px">Check Out Our Pitch</h2>
-        <video controls width="100%">
-          <source
-            src="https://luxeedrobotics.com/wp-content/uploads/2024/09/LUXEED-Pitch-2024.mp4?_=1"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
       <div class="buttons">
-        <a href="farmers.html">For Farmers</a>
-        <a href="investors.html">For Investors</a>
-        <a href="laser-ai.html">LUXEED in Action</a>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSccbNh2uJmcGKrWboS6FW9fJl1DA7MUidc5SCpY4gNOOj1KUQ/viewform?usp=header"
-          >Quiz!</a
-        >
+        <a href="index.html">Back to Home</a>
       </div>
     </div>
   </body>
