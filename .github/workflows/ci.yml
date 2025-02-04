@@ -29,6 +29,7 @@ jobs:
           cp farmers.html public/
           cp investors.html public/
           cp laser-ai.html public/
+          cp quiz.html public/
 
           # Copy the assets folder (ensure it's included in the deployment)
           cp -r assets public/
