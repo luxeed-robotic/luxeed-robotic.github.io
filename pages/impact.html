@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <title>Impact | Luxeed Robotics</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        margin: 0;
+        background-color: #121212;
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        min-height: 60%;
+        background: rgba(40, 40, 40, 0.9);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        animation: fadeIn 0.7s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .header {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+        border-bottom: 2px solid #ddd;
+      }
+      .logo {
+        height: 50px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        display: flex;
+        align-items: center;
+      }
+      nav ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      nav ul li img {
+        height: 50px;
+        width: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+      nav ul li img:hover {
+        transform: scale(1.1);
+      }
+      h1 {
+        font-size: 32px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      a {
+        color: #7cc142;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .buttons a {
+        min-width: 150px;
+        display: inline-block;
+        padding: 18px 28px;
+        background: linear-gradient(135deg, #7cc142, #68a539);
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.5px;
+        margin-top: 20px;
+      }
+      .buttons a:hover {
+        background: linear-gradient(135deg, #68a539, #5d9432);
+        transform: translateY(-4px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+      }
+      .section {
+        margin-top: 30px;
+        width: 70%;
+      }
+      .impact-on-herbicides {
+        text-align: left;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .herbicide-details,
+      .herbicide-impact {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .herbicide-impact {
+        max-width: 100%;
+      }
+
+      .sections-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 75%;
+      }
+
+      .sections-container .section {
+        width: 100%;
+        background-color: #2e2e2e; /* Light background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .sections-container .section:nth-last-child(1) {
+        grid-column: -3 / span 2;
+      }
+
+      .sections-container .section:hover {
+        transform: translateY(-5px);
+      }
+
+      .sections-container .section h2 {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 960px) {
+        body {
+          height: auto;
+        }
+        .container {
+          padding: 20px;
+        }
+        .header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 15px;
+          border-bottom: none;
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+        h2 {
+          font-size: 1.1rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+        nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        nav ul li {
+          margin: 5px;
+        }
+        nav ul li img {
+          height: 35px;
+        }
+        .impact-on-herbicides {
+          flex-direction: column;
+        }
+        .herbicide-impact {
+          max-width: 100%;
+        }
+
+        .herbicide-details,
+        .herbicide-impact {
+          flex: 1;
+          min-width: 100%;
+        }
+        .sections-container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 0;
+        }
+        .section {
+          width: 90%;
+        }
+        .buttons a {
+          padding: 18px 18px;
+          font-size: 12px;
+        }
+      }
+      @media (max-height: 1000px) {
+        body {
+          height: auto;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <script>
+      function highlightHeader() {
+        // Get the hash from the URL (e.g., "#sdg-2")
+        const hash = window.location.hash.substring(1); // Remove the "#"
+
+        // Reset all headers
+        document.querySelectorAll("h2").forEach((header) => {
+          header.style.color = ""; // Reset to default
+        });
+
+        // Highlight the h2 inside the matched section
+        if (hash) {
+          const targetSection = document.getElementById(hash);
+          if (targetSection) {
+            const targetHeader = targetSection.querySelector("h2");
+            if (targetHeader) {
+              targetHeader.style.color = "#7cc142"; // Change color (green in this case)
+            }
+          }
+        }
+      }
+
+      // Run function on page load and hash change
+      window.addEventListener("load", highlightHeader);
+      window.addEventListener("hashchange", highlightHeader);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="../assets/logo.png" alt="Luxeed Robotics Logo" class="logo" />
+        <nav>
+          <ul>
+            <li>
+              <a href="#sdg-2">
+                <img src="../assets/SDG_2.png" alt="SDG 2" />
+              </a>
+            </li>
+            <li>
+              <a href="#sdg-6">
+                <img src="../assets/SDG_6.png" alt="SDG 6" />
+              </a>
+            </li>
+            <li>
+              <a href="#sdg-8">
+                <img src="../assets/SDG_8.png" alt="SDG 8" />
+              </a>
+            </li>
+            <li>
+              <a href="#sdg-13">
+                <img src="../assets/SDG_13.png" alt="SDG 13" />
+              </a>
+            </li>
+            <li>
+              <a href="#sdg-15">
+                <img src="../assets/SDG_15.png" alt="SDG 15" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Investment Teaser PDF Section -->
+      <div class="section">
+        <h1>Promoting the Transition to Organic and Regenerative Weeding</h1>
+        <p style="margin-top: 10px">
+          Weeding isn’t just about killing weeds around crops: it’s about the
+          future of our soil.
+        </p>
+        <p>
+          LUXEED Robotics is turning weeding into a regenerative and profitable
+          business. Slashing costs in the millions, saving crops, doubling
+          farmer profits on the same plot to produce more food for the
+          ever-growing global population. No herbicides. No soil disruption.
+        </p>
+        <p>
+          Farmers have battled weeds for centuries, watching their profits
+          shrink, soils degrade, and herbicide resistance thrive. Now, they
+          finally have a better way: lasers and AI.
+        </p>
+        <p>
+          LUXEED is changing the game of laserweeding: transforming it from a
+          massive, slow, and energy-hungry process meant for large farms only,
+          into a fast and lightweight solution accessible for all.
+        </p>
+        <p>
+          And we’re doing it while restoring soil health. Soil is a living
+          carbon sink that, when left undisturbed, can capture as much CO₂ as
+          taking over 1 billion cars off the road every year. Weeding is a
+          destructive, necessary farm task standing in the way of regeneration
+          and future carbon credits for the farmers.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>LUXEED’s Early Impact on Herbicide Disruption</h2>
+        <div class="impact-on-herbicides">
+          <div class="herbicide-details">
+            <p>Herbicides on onions in one season:</p>
+            <ul>
+              <li>
+                <b>Ioxynil (200):</b> 0.6 liters at €49.08 per liter, totaling
+                €29
+              </li>
+              <li>
+                <b>Tepraloxydim (50):</b> 2 liters at €69.17 per liter, totaling
+                €138
+              </li>
+              <li>
+                <b>Bentazon (480):</b> 0.6 liters at €45.71 per liter, totaling
+                €27
+              </li>
+              <li>
+                <b>Pendimethalin (400):</b> 1.75 liters at €27.47 per liter,
+                totaling €48
+              </li>
+            </ul>
+          </div>
+          <div class="herbicide-impact">
+            <p>
+              That’s <strong>4.95 liters of herbicides per ha</strong> per
+              season of onion. That’s
+              <strong>0.5M liters of herbicides removed</strong> by the first
+              two years of market entry of LUXEED. For more info on market size
+              and opportunity, <a href="go-to-market.html">click here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sections-container">
+        <div class="section" id="sdg-2">
+          <h2>SDG 2 Zero Hunger - Target 2.4</h2>
+          <p>
+            The implement enhances the efficiency of agricultural practices by
+            using a high-precision laser weeding system. This technology
+            controls competition between crops and weeds for essential resources
+            (nutrients, light, and water) ensuring agricultural productivity,
+            therefore food security by sustainable and resilient agriculture.
+            For example, onion crops have very poor competitive ability with
+            weeds due to its inherent characteristics like short stature,
+            non-branching habit, sparse foliage, shallow root system and
+            extremely slow growth during initial stage. Yield losses for onion
+            plots due to weed competition can be as high as 82.2% (Tewari et
+            al., 2003).
+          </p>
+        </div>
+
+        <div class="section" id="sdg-6">
+          <h2>SDG 6 Clear Water and Sanitation - Target 6.3</h2>
+          <p>
+            Traditional agricultural methods often involve the use of
+            herbicides, compromising the environmental ecosystem and endangering
+            human health. According to the European Water Agency (8), herbicide
+            concentration above standards levels were found in up to 25% of
+            surface water monitoring sites across Europe. The standard levels
+            reflect the need to keep concentrations of herbicides as low as
+            possible in ground water to avoid human health risk. LUXEED&#39;s
+            aims to eliminate the use of herbicides, and their residues in
+            products, the soil, and the risk of contamination of water bodies.
+          </p>
+        </div>
+
+        <div class="section" id="sdg-8">
+          <h2>SDG 8 Decent Work and Economic Growth - Target 8.2</h2>
+          <p>
+            Currently, the EU faces acute personnel shortages, which is a
+            limiting factor for the horticulture industry, more so with the
+            availability of workforce during peak harvesting seasons (9). By
+            automating the labor- intensive process of weeding, the implement
+            not only improves efficiency but also enhances job quality by
+            allowing agricultural workers to engage in more productive tasks.
+            The development and implementation of such advanced agricultural
+            technologies can stimulate economic growth through new technological
+            markets and employment opportunities in the agri-tech sector.
+          </p>
+        </div>
+
+        <div class="section" id="sdg-13">
+          <h2>SDG 13 Climate Action - Target 13.1</h2>
+          <p>
+            Open-field crops are increasingly vulnerable to the adverse effects
+            of climate change, with extreme weather events becoming more
+            frequent. LUXEED’s lightweight design minimizes soil compaction,
+            preserving its hydraulic conductivity and carrying capacity of water
+            (10). Additionally, laser weeding prevents disturbance to the soil,
+            maintaining the integrity of the soil structure. As severe weather
+            events—such as heavy rainfall and prolonged droughts—continue to
+            threaten crop yields, protecting the soil’s ability to infiltrate
+            and retain water is essential in mitigating the impacts of climate
+            change.
+          </p>
+        </div>
+
+        <div class="section" id="sdg-15">
+          <h2>SDG 15 Life On Land - Target 15.1</h2>
+          <p>
+            Herbicide application (11) can have indirect consequences of
+            terrestrial ecosystems due to spray drift and erosion by wind and
+            water. Up to 25% (12) of applied pesticides are carried by air
+            currents, leading to spread across hundreds of kilometers. LUXEED
+            eliminates the need for herbicide usage while also minimizing soil
+            disruption and non-target species, preserving soil health and
+            biodiversity.
+          </p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="../../index.html">Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>

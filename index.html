@@ -28,7 +28,7 @@
       }
       .container {
         width: 100%;
-        max-width: 1000px;
+        max-width: 1200px;
         min-height: 50%;
         background: rgba(40, 40, 40, 0.9);
         padding: 40px;
@@ -54,7 +54,14 @@
       .intro {
         width: 80%;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+      }
+      .intro-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+        margin-block: 10px;
       }
       .buttons {
         display: flex;
@@ -99,6 +106,27 @@
         }
       }
       @media (max-width: 768px) {
+        h1 {
+          font-size: 1.2rem;
+        }
+        h2 {
+          font-size: 1.1rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+        body {
+          height: auto;
+        }
+        .section {
+          width: 90%;
+        }
+        .buttons a {
+          padding: 18px 18px;
+          font-size: 12px;
+        }
+      }
+      @media (max-height: 1000px) {
         body {
           height: auto;
         }
@@ -110,31 +138,59 @@
       <img src="assets/logo.png" alt="Luxeed Robotics Logo" class="logo" />
       <div class="intro">
         <h1>Welcome to LUXEED Robotics</h1>
-        <p>
-          <strong
-            >Our mission is to make laser-weeding more accessible to
-            farmers</strong
-          >
-          to help them move on from herbicides.
-        </p>
+        <h3>Healthy SOIL. High YIELD</h3>
+
+        <div class="intro-text">
+          <p>
+            Organic &amp; Regenerative farming practices accessible to
+            <strong>all</strong>.
+          </p>
+          <p>
+            <strong
+              >Our mission is to make laser-weeding more accessible to
+              farmers</strong
+            >
+            to help them move on from herbicides.
+          </p>
+          <p>
+            We can make food production a sustainable practice to meet our
+            planet’s needs and our <strong>ever-growing food demand.</strong>
+          </p>
+        </div>
       </div>
 
       <div class="section">
         <h2 style="margin-bottom: 10px">Check Out Our Pitch</h2>
-        <video controls width="100%">
-          <source
-            src="https://luxeedrobotics.com/wp-content/uploads/2024/09/LUXEED-Pitch-2024.mp4?_=1"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          width="100%"
+          style="aspect-ratio: 16/9"
+          src="https://www.youtube.com/embed/96bRqI60F0o?si=_EBHVRiAg2Xxf2g3"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+
+      <div class="section">
+        <h2 style="margin-bottom: 10px">Investment Teaser</h2>
+        <p>
+          <a
+            style="color: #7cc142; text-decoration: none"
+            href="assets/investment-teaser.pdf"
+            target="_blank"
+            >Download the Investment Teaser</a
+          >
+          to learn more about the investment opportunities at Luxeed Robotics.
+        </p>
       </div>
 
       <div class="buttons">
-        <a href="farmers.html">For Farmers</a>
-        <a href="investors.html">For Investors</a>
-        <a href="laser-ai.html">LUXEED in Action</a>
-        <a href="quiz.html">Quiz!</a>
+        <a href="pages/technology.html">Technology</a>
+        <a href="pages/go-to-market.html">Go-To Market</a>
+        <a href="pages/impact.html">Impact</a>
       </div>
     </div>
   </body>
