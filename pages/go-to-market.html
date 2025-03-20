@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <title>Go-To Market | Luxeed Robotics</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        margin: 0;
+        background-color: #121212;
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        width: 100%;
+        min-height: 60%;
+        background: rgba(40, 40, 40, 0.9);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        animation: fadeIn 0.7s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo {
+        width: 180px;
+        margin-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      th,
+      td {
+        padding: 12px; /* Add padding for better spacing inside cells */
+        text-align: left; /* Align text to the left */
+        border: 1px solid #ddd; /* Add a subtle border for each cell */
+      }
+      caption {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 32px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      a {
+        color: #7cc142;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .buttons a {
+        min-width: 150px;
+        display: inline-block;
+        padding: 18px 28px;
+        background: linear-gradient(135deg, #7cc142, #68a539);
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.5px;
+        margin-top: 20px;
+      }
+      .buttons a:hover {
+        background: linear-gradient(135deg, #68a539, #5d9432);
+        transform: translateY(-4px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+      }
+      .section {
+        margin-top: 30px;
+        width: 70%;
+      }
+
+      .traction-interest {
+        width: 60%;
+      }
+
+      .image-slider-container {
+        width: 60%;
+        height: 120px;
+        overflow: hidden;
+      }
+      .image-slider {
+        display: flex;
+        width: 3620px;
+        height: 100%;
+        background-color: white;
+        animation: infinitescroll 50s linear infinite;
+      }
+      .image-slider-inner {
+        width: 1800px;
+        margin-inline: 5px;
+      }
+      .image-slider-inner ul {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        padding-left: 0;
+        margin: 0;
+        height: 100%;
+        overflow-y: hidden;
+        gap: 5px;
+      }
+      .image-slider-inner ul li {
+        width: 200px;
+      }
+      .image-slider-inner ul li img {
+        width: 100%;
+        height: auto;
+      }
+
+      @keyframes infinitescroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-height: 1000px) {
+        body {
+          height: auto;
+        }
+      }
+      @media (max-width: 960px) {
+        body {
+          height: auto;
+        }
+        .section,
+        .image-slider-container,
+        .traction-interest {
+          width: 90%;
+        }
+
+        h1 {
+          font-size: 1.2rem;
+        }
+        h2 {
+          font-size: 1.1rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+        .buttons a {
+          padding: 18px 18px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="../assets/logo.png" alt="Luxeed Robotics Logo" class="logo" />
+      <h1>Go To Market</h1>
+
+      <div class="traction-interest">
+        <h1 style="margin-top: 10px">Traction and Interest</h1>
+        <p style="margin-top: 10px">
+          We've engaged with <strong>25 farmers</strong>, interviewing them to
+          understand their needs, collecting images from their fields, and
+          scheduling demo sessions to showcase our technology. Additionally,
+          we've collaborated with <strong>4 organizations</strong> to explore
+          potential partnerships and expand our reach. So far, we've
+          successfully conducted <strong>2 demos</strong>, offering
+          <strong>free demonstrations</strong> to farmers to highlight how our
+          AI-powered solution can improve weed management and efficiency in
+          their fields.
+        </p>
+      </div>
+
+      <div class="image-slider-container">
+        <div class="image-slider">
+          <div class="image-slider-inner">
+            <ul>
+              <li>
+                <img src="../assets/companies/company1.png" alt="company 1" />
+              </li>
+              <li>
+                <img src="../assets/companies/company2.png" alt="company 2" />
+              </li>
+              <li>
+                <img src="../assets/companies/company3.png" alt="company 3" />
+              </li>
+              <li>
+                <img src="../assets/companies/company4.png" alt="company 4" />
+              </li>
+              <li>
+                <img src="../assets/companies/company5.png" alt="company 5" />
+              </li>
+              <li>
+                <img src="../assets/companies/company6.png" alt="company 6" />
+              </li>
+              <li>
+                <img src="../assets/companies/company7.png" alt="company 7" />
+              </li>
+              <li>
+                <img src="../assets/companies/company8.png" alt="company 8" />
+              </li>
+              <li>
+                <img src="../assets/companies/company9.png" alt="company 9" />
+              </li>
+            </ul>
+          </div>
+          <div class="image-slider-inner">
+            <ul>
+              <li>
+                <img src="../assets/companies/company1.png" alt="company 1" />
+              </li>
+              <li>
+                <img src="../assets/companies/company2.png" alt="company 2" />
+              </li>
+              <li>
+                <img src="../assets/companies/company3.png" alt="company 3" />
+              </li>
+              <li>
+                <img src="../assets/companies/company4.png" alt="company 4" />
+              </li>
+              <li>
+                <img src="../assets/companies/company5.png" alt="company 5" />
+              </li>
+              <li>
+                <img src="../assets/companies/company6.png" alt="company 6" />
+              </li>
+              <li>
+                <img src="../assets/companies/company7.png" alt="company 7" />
+              </li>
+              <li>
+                <img src="../assets/companies/company8.png" alt="company 8" />
+              </li>
+              <li>
+                <img src="../assets/companies/company9.png" alt="company 9" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <img src="../assets/growth.png" alt="Growth" width="100%" />
+        <img
+          src="../assets/roadmap.png"
+          alt="Roadmap"
+          width="100%"
+          style="background-color: white"
+        />
+      </div>
+
+      <div class="section">
+        <h1>Market Trends</h1>
+        <p>
+          The agricultural robots market was estimated at €11B in 2022 and a
+          CAGR of 20.6% from 2023 to 2030.
+        </p>
+        <p style="text-align: left">
+          The laser weeding market is experiencing significant growth, driven
+          by:
+        </p>
+        <ul style="text-align: left">
+          <li>
+            The global transition toward sustainable and regenerative farming
+            practices. The EU has goal to achieve 25% organic farming by 2030.
+          </li>
+          <li>
+            Increasing regulatory restrictions on herbicides due to their
+            environmental and health impacts.
+          </li>
+          <li>
+            Traditional weeding methods are becoming impractical due to high
+            labor costs (€26/hr as of 2025) and a 2% annual labor shortage.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h1>Target Market</h1>
+        <ul style="text-align: left">
+          <li>
+            The global weed control market is projected to reach €44B by 2030,
+            growing at a CAGR of 3.5% from €26.81B in 2018.
+          </li>
+          <li>
+            LUXEED TAM is estimated at €3.3B, based on weeding costs per hectare
+            in Belgium, Denmark, France, Italy, Netherlands, Poland, Portugal,
+            Spain, and the UK for seven key crops: carrots and turnips, green
+            garlic, leeks, lettuce and chicory, onions and shallots, green peas,
+            and spinach.
+          </li>
+          <li>
+            The cost of weeding per hectare is calculated based on either manual
+            weeding or herbicide application.
+          </li>
+          <li>
+            For instance, weeding 1 hectare of onion fields takes approximately
+            100 hours, with a labor wage of €26/hour, leading to a total labor
+            cost of €2,600. Adding herbicide application (€242/hectare) results
+            in a total weeding cost of €2842 (5) per hectare.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <p>
+          LUXEED will initially target four crops in the Netherlands, France,
+          and Poland, resulting in a serviceable addressable market (SAM) of
+          €770M. Within three years of market entry, LUXEED aims to produce 125
+          implements for 4 different widths speeds and weeding capacities at an
+          average price of €500k achieve approx. 8% market share (SOM) = €62.5M.
+          In 2020, the EU reported 9.1M farms, of which 36% (3.3M) were small
+          farms (<5 ha), 60% (5.5M) were small-mid size farms (5-50 ha), and 4%
+          (299K) were large farms (>50 ha) (6)
+        </p>
+        <p>
+          LUXEED aims to target approximately 125 farmers within the first two
+          years of market entry (After Series A). An average capacity of one
+          LUXEED machine is 200 hectares/year, that means 25,000 ha without
+          herbicides, removing herbicides from the picture: 0.5M liters. For
+          more info on impact, <a href="../pages/impact.html">click here.</a>
+        </p>
+      </div>
+
+      <div class="buttons">
+        <a href="../../index.html">Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>
